@@ -1,0 +1,32 @@
+nav{
+	background: #85D4B7;
+}
+
+#logo-container{
+	padding-top: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#fotos{
+	background: #71D2AE;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+footer{
+	height: 100px;
+	background: #85D4B7;
+	color: white;
+	text-align: center;
+	padding-top: 40px;
+}
+
+#cuerpo{
+	margin-top: 40px;
+	margin-left: 8px;
+}
+
+#usuario{
+}

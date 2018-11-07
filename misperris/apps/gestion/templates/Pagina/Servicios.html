@@ -1,0 +1,105 @@
+ {% load staticfiles %}
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+<nav  role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="{% url 'Home' %}" class="brand-logo">
+        <img src="{% static 'img/logo.png' %}" width="260" height="50"></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="{% url 'Home' %}">Inicio</a></li>
+          <li><a href="{% url 'Somos' %}">¿Quienes Somos?</a></li>
+          <li><a href="{% url 'Servicios' %}">Servicios</a></li>
+          <li><a href="{% url 'Contacto' %}">Contáctanos</a></li>
+          <!-- Dropdown Trigger -->
+          <li><a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Cuentas</a>
+            <ul id='dropdown1' class='dropdown-content'>
+              <li><a href="{% url 'Registro' %}">Registrarse</a></li>
+              <li><a href="{% url 'Login' %}">Iniciar sesión</a></li>
+              <li><a href="{% url 'Galeria' %}">Galeria</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul id="nav-mobile" class="sidenav">
+        <li><a href="{% url 'Home' %}">Inicio</a></li>
+        <li><a href="{% url 'Somos' %}">¿Quienes Somos?</a></li>
+        <li><a href="{% url 'Servicios' %}">Servicios</a></li>
+        <li><a href="{% url 'Contacto' %}">Contáctanos</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+                 
+      
+     
+
+     <div id="fotos">
+      <div class="carousel carousel-slider center" data-indicators="true">
+        <div class="carousel-item " href="#one!">
+          <img src="{% static 'img/pug.jpg' %} " align="center">
+        </div>
+        <div class="carousel-item " href="#two!">
+          <img src="{% static 'img/ingles.jpg' %} ">
+        </div>
+        <div class="carousel-item " href="#three!">
+          <img src="{% static 'img/dogoArgentino.jpg' %} ">
+        </div>
+        <div class="carousel-item " href="#four!">
+          <img src="{% static 'img/frances.jpg' %} ">
+        </div>
+      </div>
+</div>
+   <div id="cuerpo">
+            <h5 class=""><b>Recibimos Perros</b></h5>
+            <div class="divider"></div><br>
+            <p>Mis Perris recibe perros en condicion de calle para posteriormente buscarle un hogar. </p>
+
+  <p>Cuidamos estos perros hasta que encontremos una persona que pueda hacerse responsable de la mascota y le entregue cariño. <br></p>
+          <br>
+
+       
+            <h5 class="" ><b>Buscamos hogar a perros</b></h5>
+            <div class="divider"></div><br>
+            <p>Mis perris tambien selecciona a las personas y al perro mejor capacitado para ciertas familias con necesidades de un compañero. </p>
+      <p>Buscamos segun tamaños y razas la mejor opcion para los perros , y tambien el mejor dueño para ellos. 
+    </div>
+</p></div>
+</body>
+  <footer>
+    <img src="{% static 'img/facebook.png' %}">
+    <img src="{% static 'img/google.png' %}">
+    <img src="{% static 'img/instagram.png' %}">
+    <img src="{% static 'img/correo.png' %}">
+    <div>
+      <a href="/admin">admin</a>
+    </div>
+  </footer>
+     <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems);}); 
+
+      </script>
+      <script >
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+      </script>
+      <script >
+         document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.dropdown-trigger');
+        var instances = M.Dropdown.init(elems); });
+      </script>
+</body>
+
+  </html>
